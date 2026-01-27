@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import sleepCatIcon from './assets/icon.png'
 // import ScrollSequence from './components/ScrollSequence' // Temporarily disabled
 
 const rotatingWords = [
@@ -113,7 +114,7 @@ function App() {
             <header className="header">
                 <a href="https://sleepcat.app" className="logo-container" target="_blank" rel="noopener noreferrer">
                     <img
-                        src="/assets/icon.png"
+                        src={sleepCatIcon}
                         alt="SleepCat"
                         className="logo-image"
                     />
@@ -180,7 +181,7 @@ function App() {
                                     <div className="mock-app-blur"></div>
                                     <div className="mock-app-content">
                                         <img
-                                            src="/assets/icon.png"
+                                            src={sleepCatIcon}
                                             alt="SleepCat"
                                             className="mock-app-icon"
                                         />
@@ -206,7 +207,7 @@ function App() {
                                     <div className="mock-app-blur"></div>
                                     <div className="mock-app-content">
                                         <img
-                                            src="/assets/icon.png"
+                                            src={sleepCatIcon}
                                             alt="SleepCat"
                                             className="mock-app-icon"
                                         />
@@ -269,7 +270,7 @@ function App() {
             <section className="coming-soon-section" id="coming-soon" ref={comingSoonRef}>
                 <div className={`coming-soon-mascot ${showMascot ? 'visible' : ''}`}>
                     <img
-                        src="/assets/icon.png"
+                        src={sleepCatIcon}
                         alt="SleepCat mascot"
                     />
                 </div>
