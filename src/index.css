@@ -792,11 +792,19 @@ p {
 }
 
 /* ===== Responsive ===== */
+
+/* Tablet and smaller (768px) */
 @media (max-width: 768px) {
   :root {
     --font-size-5xl: 2.5rem;
     --font-size-4xl: 2rem;
     --font-size-3xl: 1.75rem;
+  }
+
+  .hero-section {
+    padding-top: 80px;
+    min-height: auto;
+    padding-bottom: var(--spacing-3xl);
   }
 
   .hero-content {
@@ -810,8 +818,41 @@ p {
     order: 1;
   }
 
+  .hero-body {
+    max-width: 100%;
+  }
+
+  .hero-section-block h3 {
+    text-align: center;
+  }
+
   .hero-illustration {
     order: 0;
+  }
+
+  /* Hide second mockup on mobile */
+  .mock-pixel {
+    display: none;
+  }
+
+  /* Adjust mockups container */
+  .mockups-container {
+    gap: 0;
+    justify-content: center;
+  }
+
+  /* Scale down iPhone mockup */
+  .mock-app-card {
+    transform: scale(0.85);
+  }
+
+  .mock-iphone {
+    transform: scale(0.85);
+  }
+
+  /* Hide rotating words in header on mobile */
+  .header-rotating-words {
+    display: none;
   }
 
   .illustration-placeholder {
@@ -823,7 +864,185 @@ p {
     height: 36px;
   }
 
+  /* FAQ improvements */
+  .faq-section {
+    padding: var(--spacing-2xl) 0;
+    min-height: auto;
+  }
+
+  .faq-list {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .faq-question {
+    min-height: 48px;
+    padding: var(--spacing-lg) 0;
+    gap: var(--spacing-md);
+  }
+
+  .faq-title {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  /* Coming Soon */
+  .coming-soon-section {
+    min-height: auto;
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
   .coming-soon-title {
     font-size: var(--font-size-3xl);
+  }
+
+  .coming-soon-mascot {
+    width: 150px;
+  }
+}
+
+/* Phone screens (480px and smaller) */
+@media (max-width: 480px) {
+  :root {
+    --font-size-5xl: 2rem;
+    --font-size-4xl: 1.75rem;
+    --font-size-3xl: 1.5rem;
+    --font-size-2xl: 1.25rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .logo-image {
+    height: 32px;
+  }
+
+  .logo-text {
+    font-size: var(--font-size-base);
+  }
+
+  .hero-section {
+    padding-top: 70px;
+  }
+
+  .rotating-text-container {
+    height: 50px;
+  }
+
+  .rotating-word {
+    font-size: var(--font-size-4xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .hero-body {
+    line-height: 1.8;
+  }
+
+  .hero-section-block {
+    margin-bottom: var(--spacing-2xl);
+    padding-top: var(--spacing-md);
+  }
+
+  .hero-section-block h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Smaller mockup on phones */
+  .mock-app-card {
+    width: 200px;
+    height: 400px;
+    border-radius: 35px;
+    transform: scale(0.9);
+  }
+
+  .mock-iphone {
+    transform: scale(0.9);
+  }
+
+  .mock-app-card::after {
+    width: 70px;
+    height: 22px;
+    top: 10px;
+  }
+
+  .mock-app-content {
+    padding: 50px 16px 24px;
+    gap: 12px;
+  }
+
+  .mock-app-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .mock-app-sound,
+  .mock-app-timer {
+    padding: 10px 12px;
+  }
+
+  .mock-app-label {
+    font-size: 10px;
+  }
+
+  .mock-app-value {
+    font-size: 13px;
+  }
+
+  /* FAQ adjustments */
+  .faq-question {
+    font-size: var(--font-size-base);
+    min-height: 44px;
+  }
+
+  .faq-icon {
+    font-size: var(--font-size-xl);
+    flex-shrink: 0;
+  }
+
+  .faq-answer p {
+    font-size: var(--font-size-sm);
+  }
+
+  .faq-item.open .faq-answer {
+    max-height: 400px;
+  }
+
+  /* Coming Soon */
+  .coming-soon-mascot {
+    width: 120px;
+  }
+
+  .coming-soon-text {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* Extra small phones (360px and smaller) */
+@media (max-width: 360px) {
+  :root {
+    --font-size-5xl: 1.75rem;
+    --font-size-4xl: 1.5rem;
+  }
+
+  .rotating-text-container {
+    height: 45px;
+  }
+
+  .mock-app-card {
+    width: 180px;
+    height: 360px;
+    transform: scale(0.85);
+  }
+
+  .mock-iphone {
+    transform: scale(0.85);
   }
 }
