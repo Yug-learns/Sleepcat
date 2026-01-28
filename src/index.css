@@ -63,11 +63,6 @@ body {
   line-height: 1.6;
   color: var(--color-text-primary);
   background-color: #000000;
-  background-image: url('/assets/background.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
