@@ -30,6 +30,8 @@ function FAQItem({ question, answer }) {
     )
 }
 
+import HeroReveal from './components/HeroReveal'
+
 function App() {
     const [currentWordIndex, setCurrentWordIndex] = useState(0)
     const [showMascot, setShowMascot] = useState(false)
@@ -128,12 +130,16 @@ function App() {
                 </div>
             </header>
 
-            {/* Section 1: Awareness Hero */}
+            {/* NEW Hero Reveal Section */}
+            <div>
+                <HeroReveal />
+            </div>
+
+            {/* Section 1: Awareness Hero (Restored as 2nd Page) */}
             <section className="hero-section" id="awareness" ref={heroRef}>
                 <div className="container">
                     <div className="hero-content">
                         <div className="hero-text animate-on-scroll animate-from-left">
-                            {/* Rotating words section - hides when moved to header */}
                             <div className={`rotating-text-container ${wordsInHeader ? 'hidden' : ''}`}>
                                 <span className="rotating-word" key={currentWordIndex}>
                                     {rotatingWords[currentWordIndex]}
@@ -174,9 +180,7 @@ function App() {
                         </div>
 
                         <div className="hero-illustration animate-on-scroll animate-from-right animate-delay-2">
-                            {/* Phone Mockups Container */}
                             <div className="mockups-container">
-                                {/* iPhone Mockup */}
                                 <div className="mock-app-card mock-iphone">
                                     <div className="mock-app-blur"></div>
                                     <div className="mock-app-content">
@@ -202,7 +206,6 @@ function App() {
                                     </div>
                                 </div>
 
-                                {/* Pixel Mockup */}
                                 <div className="mock-app-card mock-pixel">
                                     <div className="mock-app-blur"></div>
                                     <div className="mock-app-content">
