@@ -1030,3 +1030,19 @@ p {
 .volume-slider::-webkit-slider-thumb:hover {
   transform: scale(1.3);
 }
+
+/* ===== Mobile Hero Fix ===== */
+@media (max-width: 768px) {
+  .hero-reveal-title {
+    font-size: 3.5rem; /* Reduce from 8rem to fit perfectly in 50% width */
+    letter-spacing: 0.05em;
+  }
+
+  .hero-reveal-logo {
+    width: 120px; /* Slightly smaller logo on mobile */
+  }
+
+  .reveal-headline {
+    font-size: 2rem;
+  }
+}
