@@ -148,7 +148,7 @@ const HeroReveal = () => {
 
                     <audio
                         ref={audioRef}
-                        src="/sample_audio.wav"
+                        src="/sample.mp3"
                         loop
                         preload="none"
                     />
