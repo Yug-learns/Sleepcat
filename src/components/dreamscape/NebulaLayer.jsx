@@ -21,6 +21,7 @@ const NebulaLayer = () => {
                     filter: 'blur(80px)',
                     opacity: pulse1,
                     transform: `translate(${frame * 0.5}px, ${frame * 0.2}px)`,
+                    willChange: 'transform',
                 }}
             />
 
@@ -36,6 +37,7 @@ const NebulaLayer = () => {
                     filter: 'blur(100px)',
                     opacity: pulse2,
                     transform: `translate(${-frame * 0.3}px, ${-frame * 0.1}px)`,
+                    willChange: 'transform',
                 }}
             />
 

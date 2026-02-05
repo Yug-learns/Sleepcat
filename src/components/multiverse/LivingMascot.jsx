@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useVelocity, useSpring, useTransform } from 'framer-motion';
-import sleepCatIcon from '../../assets/icon.png';
+import sleepCatIcon from '../../assets/icon.webp';
 
 const LivingMascot = () => {
     // Scroll Physics
@@ -48,6 +48,8 @@ const LivingMascot = () => {
                 <motion.img
                     src={sleepCatIcon}
                     alt="SleepCat Companion"
+                    width="48"
+                    height="48"
                     style={{ width: '60%', height: '60%', objectFit: 'contain' }}
                     // Shake on high energy
                     animate={{

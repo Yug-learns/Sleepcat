@@ -1,5 +1,5 @@
 import { spring, useCurrentFrame, useVideoConfig, staticFile } from 'remotion';
-import icon from '../../assets/icon.png';
+import icon from '../../assets/icon.webp';
 
 const FloatingIcon = () => {
     const frame = useCurrentFrame();
@@ -32,6 +32,8 @@ const FloatingIcon = () => {
             <img
                 src={icon}
                 alt="SleepCat"
+                width="180"
+                height="180"
                 style={{
                     width: '180px',
                     height: '180px',

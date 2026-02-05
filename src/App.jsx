@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import sleepCatIcon from './assets/icon.png'
+import sleepCatIcon from './assets/icon.webp'
 // import ScrollSequence from './components/ScrollSequence' // Temporarily disabled
 
 const rotatingWords = [
@@ -30,11 +30,13 @@ function FAQItem({ question, answer }) {
     )
 }
 
-import CinematicDreamscape from './components/CinematicDreamscape'
-import GlobalBackground from './components/GlobalBackground'
+import { Suspense, lazy } from 'react'
 import MagneticSection from './components/multiverse/MagneticSection'
-import LivingMascot from './components/multiverse/LivingMascot'
-import EventHorizon from './components/multiverse/EventHorizon'
+
+const CinematicDreamscape = lazy(() => import('./components/CinematicDreamscape'))
+const GlobalBackground = lazy(() => import('./components/GlobalBackground'))
+const LivingMascot = lazy(() => import('./components/multiverse/LivingMascot'))
+const EventHorizon = lazy(() => import('./components/multiverse/EventHorizon'))
 
 function App() {
     const [currentWordIndex, setCurrentWordIndex] = useState(0)
@@ -119,10 +121,14 @@ function App() {
             {/* Header with Logo */}
 
             {/* Living Mascot Companion */}
-            <LivingMascot />
+            <Suspense fallback={null}>
+                <LivingMascot />
+            </Suspense>
 
             {/* Global Background (Fixed) */}
-            <GlobalBackground />
+            <Suspense fallback={<div style={{ background: '#000', width: '100vw', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 0 }} />}>
+                <GlobalBackground />
+            </Suspense>
 
             <div style={{ position: 'relative', zIndex: 1 }}>
                 <header className="header">
@@ -131,6 +137,8 @@ function App() {
                             src={sleepCatIcon}
                             alt="SleepCat"
                             className="logo-image"
+                            width="48"
+                            height="48"
                         />
                         <span className="logo-text">SleepCat</span>
                     </a>
@@ -144,7 +152,9 @@ function App() {
 
                 {/* Cinematic Dreamscape Section */}
                 <div>
-                    <CinematicDreamscape />
+                    <Suspense fallback={<div style={{ height: '100vh', width: '100%' }}></div>}>
+                        <CinematicDreamscape />
+                    </Suspense>
                 </div>
 
                 {/* Section 1: Awareness Hero (Restored as 2nd Page) */}
@@ -288,7 +298,9 @@ function App() {
                 </section>
 
                 {/* Event Horizon Footer */}
-                <EventHorizon />
+                <Suspense fallback={null}>
+                    <EventHorizon />
+                </Suspense>
 
             </div>
         </>

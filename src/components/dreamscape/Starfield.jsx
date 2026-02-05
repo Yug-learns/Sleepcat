@@ -21,7 +21,7 @@ const Starfield = () => {
         ctx.clearRect(0, 0, width, height);
 
         // Config
-        const numStars = 1000;
+        const numStars = 300;
         const speed = 0.5; // Base drift speed
 
         // Draw stars
