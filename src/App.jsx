@@ -117,11 +117,11 @@ function App() {
     return (
         <>
             {/* Header with Logo */}
-<<<<<<< HEAD
-    {/* Living Mascot Companion */ }
-    <LivingMascot />
 
-    {/* Global Background (Fixed) */ }
+            {/* Living Mascot Companion */}
+            <LivingMascot />
+
+            {/* Global Background (Fixed) */}
             <GlobalBackground />
 
             <div style={{ position: 'relative', zIndex: 1 }}>
@@ -245,11 +245,10 @@ function App() {
                                                     <div className="mock-slider-fill" style={{ width: '45%' }}></div>
                                                     <div className="mock-slider-thumb" style={{ left: '45%' }}></div>
                                                 </div>
-=======
-            <header className="header">
-                                                <a href="https://sleepcat.app" className="logo-container" target="_blank" rel="noopener noreferrer">
-                                                    <img
-                                                        src={sleepCatIcon}
+                                                <div className="mock-slider-track">
+                                                    <div className="mock-slider-fill" style={{ width: '45%' }}></div>
+                                                    <div className="mock-slider-thumb" style={{ left: '45%' }}></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -259,58 +258,39 @@ function App() {
                     </div>
                 </section>
 
-        {/* Section 2: FAQ */}
-        < section className = "faq-section" id = "faq" ref = { faqRef } >
-            <div className="container">
-                <h2 className="faq-title animate-on-scroll animate-from-bottom">Frequently Asked Questions</h2>
-                <div className="faq-list animate-on-scroll animate-from-bottom animate-delay-2">
-                    <FAQItem
-                        question="What is SleepCat?"
-                        answer="SleepCat is a sleep companion app designed to help you fall asleep faster and wake up feeling refreshed. It offers a curated collection of soothing sounds and ambient music tailored to your preferences."
-                    />
-                    <FAQItem
-                        question="How does SleepCat help me sleep better?"
-                        answer="SleepCat uses scientifically-backed audio techniques to calm your mind and reduce stress. Our sounds mask disruptive noise, provide a steady focus for your brain, and help ease the transition from wakefulness to sleep naturally."
-                    />
-                    <FAQItem
-                        question="Is SleepCat free to use?"
-                        answer="SleepCat offers a free tier with essential sounds and features. Premium subscribers get access to our full library, advanced customization options, and exclusive content updated regularly."
-                    />
-                    <FAQItem
-                        question="Can I use SleepCat offline?"
-                        answer="Yes! Once you download your favorite sounds, you can use them anytime without an internet connection. Perfect for travel, camping, or areas with limited connectivity."
-                    />
-                    <FAQItem
-                        question="When will SleepCat be available?"
-                        answer="We're working hard to bring SleepCat to you soon! Check our website regularly to be the first to know when we launch and get exclusive early access benefits."
-                    />
-                </div>
-            </div>
-                </section >
-
-        {/* Event Horizon Footer */ }
-        < EventHorizon />
-
-    {/* Section 3: Scroll Animation - TEMPORARILY DISABLED
-            <ScrollSequence onAnimationComplete={handleAnimationComplete} />
-            */}
-
-    {/* Disabled Old Footer Content to avoid duplication with Event Horizon
-                <section className="coming-soon-section" id="coming-soon" ref={comingSoonRef}>
-                    <div className={`coming-soon-mascot ${showMascot ? 'visible' : ''}`}>
-                        <img
-                            src={sleepCatIcon}
-                            alt="SleepCat mascot"
-                        />
+                {/* Section 2: FAQ */}
+                <section className="faq-section" id="faq" ref={faqRef}>
+                    <div className="container">
+                        <h2 className="faq-title animate-on-scroll animate-from-bottom">Frequently Asked Questions</h2>
+                        <div className="faq-list animate-on-scroll animate-from-bottom animate-delay-2">
+                            <FAQItem
+                                question="What is SleepCat?"
+                                answer="SleepCat is a sleep companion app designed to help you fall asleep faster and wake up feeling refreshed. It offers a curated collection of soothing sounds and ambient music tailored to your preferences."
+                            />
+                            <FAQItem
+                                question="How does SleepCat help me sleep better?"
+                                answer="SleepCat uses scientifically-backed audio techniques to calm your mind and reduce stress. Our sounds mask disruptive noise, provide a steady focus for your brain, and help ease the transition from wakefulness to sleep naturally."
+                            />
+                            <FAQItem
+                                question="Is SleepCat free to use?"
+                                answer="SleepCat offers a free tier with essential sounds and features. Premium subscribers get access to our full library, advanced customization options, and exclusive content updated regularly."
+                            />
+                            <FAQItem
+                                question="Can I use SleepCat offline?"
+                                answer="Yes! Once you download your favorite sounds, you can use them anytime without an internet connection. Perfect for travel, camping, or areas with limited connectivity."
+                            />
+                            <FAQItem
+                                question="When will SleepCat be available?"
+                                answer="We're working hard to bring SleepCat to you soon! Check our website regularly to be the first to know when we launch and get exclusive early access benefits."
+                            />
+                        </div>
                     </div>
-                    <h2 className="coming-soon-title">Coming Soon</h2>
-                    <p className="coming-soon-text">
-                        SleepCat is preparing something special for you.
-                        Stay tuned for the ultimate sleep companion.
-                    </p>
                 </section>
-                */}
-            </div >
+
+                {/* Event Horizon Footer */}
+                <EventHorizon />
+
+            </div>
         </>
     )
 }
